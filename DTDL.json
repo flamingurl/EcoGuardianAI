@@ -1,0 +1,49 @@
+{
+  "@context": "dtmi:dtdl:context;3",
+  "@id": "dtmi:com:example:AirQualitySensor;1",
+  "@type": "Interface",
+  "displayName": "Lab Air Quality Monitor",
+  "description": "Monitors key air quality and environmental factors for a laboratory setting.",
+  "contents": [
+    {
+      "@type": "Telemetry",
+      "name": "co2",
+      "displayName": "CO2",
+      "description": "Concentration of carbon dioxide in parts per million. Safe lab window: 400-1000 ppm (Ideal), Warning > 1000 ppm, Critical > 1500 ppm.",
+      "schema": "integer",
+      "unit": "partPerMillion"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "humidity",
+      "displayName": "Relative Humidity",
+      "description": "Relative humidity. Safe lab window: 30-60%. Values outside this range may affect equipment or comfort.",
+      "schema": "double",
+      "unit": "percent"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "temperature",
+      "displayName": "Temperature",
+      "description": "Air temperature in degrees Celsius. Safe lab window: 20-24°C (68-75.2°F).",
+      "schema": "double",
+      "unit": "degreeCelsius"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "pm2_5",
+      "displayName": "PM2.5",
+      "description": "Concentration of particulate matter < 2.5 micrometers in micrograms per cubic meter. Safe lab window: <= 12 µg/m³ (Good Air Quality).",
+      "schema": "double",
+      "unit": "microgramPerCubicMeter"
+    },
+    {
+      "@type": "Property",
+      "name": "serialNumber",
+      "displayName": "Serial Number",
+      "description": "The serial number for the device.",
+      "writable": false,
+      "schema": "string"
+    },
+  ]
+}
