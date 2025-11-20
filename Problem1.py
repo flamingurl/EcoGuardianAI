@@ -1,9 +1,9 @@
-# Minimal anomaly check (rolling mean/std)
+# Problem 1 Solution: Anomoly Detection
 import uuid, math
 from datetime import datetime, timedelta
 from collections import deque
 
-W_SECONDS = 30*60   # rolling window length (example)
+W_SECONDS = 30*60   # rolling window length (2 minute example) - can change
 Z_THRESHOLD = 2.5
 EPS = 1e-9
 
